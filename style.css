@@ -1,7 +1,19 @@
-.leftHeader{
-    text-align: left;
+.leftHeader {
+  text-align: left;
 }
 
-.rightHeader{
-    text-align: right;
+.rightHeader {
+  text-align: right;
+}
+
+.col-6 {
+  margin: 0 auto;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.highScores {
+  margin: 0 auto;
 }
