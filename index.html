@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Quiz</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -20,37 +17,38 @@
           <a class="leftHeader" href="highscores.html">View High Scores</a>
         </div>
         <div class="col-6 rightHeader">
-          <p id="timer"></p>
+          <p id="timer" style="display: none;"></p>
         </div>
       </div>
       <div class="greeting">
-      <div class="row text-center">
-        <h1 class="greeting wrapper">Coding Quiz Challenge</h1>
-      </div>
-      <div class="row text-center">
-        <p class="greeting wrapper">
-          Try to answer the following code related questions within the time
-          limit. Keep in mind that incorrect answers will penalize your
-          score/time by ten seconds.
-        </p>
-      </div>
-      <div class="row text-center">
-        <button type="button" class="btn btn-primary greeting" id="beginBtn">
-          Begin Quiz
-        </button>
-      </div>
-      </div>
-      </div>
-
-      <div id="quiz">
-        <h1 id="question"></h1>
-        <p id="answers"></p>
-        <div class="row">
-        <p id="amountAsked">asdf</p>
-        <p id="amountCorrect">asdf</p>
+        <div class="row text-center">
+          <h1 class="greeting wrapper">Coding Quiz Challenge</h1>
+        </div>
+        <div class="row text-center">
+          <p class="greeting wrapper">
+            Try to answer the following code related questions within the time
+            limit. Keep in mind that incorrect answers will penalize your
+            score/time by ten seconds.
+          </p>
+        </div>
+        <div class="row text-center">
+          <button type="button" class="btn btn-primary greeting" id="beginBtn">
+            Begin Quiz
+          </button>
         </div>
       </div>
     </div>
+
+    <div id="quiz" style="display: none;">
+      <h1 id="question"></h1>
+      <p id="answers"></p>
+      <div class="row">
+        <p id="amountAsked">asdf</p>
+        <p id="amountCorrect">asdf</p>
+      </div>
+    </div>
+    </div>
     <script src="script.js"></script>
   </body>
+
 </html>
