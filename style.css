@@ -6,6 +6,10 @@
   text-align: right;
 }
 
+.greeting {
+  margin: 10px auto;
+}
+
 .col-6 {
   margin: 0 auto;
 }
@@ -18,10 +22,20 @@
   margin: 0 auto;
 }
 
-.greeting {
-  margin: 10px auto;
-}
 
 .wrapper {
   width: 550px;
+}
+
+#amountAsked {
+  margin: 0 auto;
+}
+
+#amountCorrect {
+  margin: 0 auto;
+}
+
+#quiz {
+  width: 550px;
+  margin: 10px auto;
 }
