@@ -9,7 +9,8 @@ var amountCorrect = 0;
 var $amountAsked = document.querySelector("#amountAsked");
 var amountAsked = 0;
 var $timer = document.querySelector("#timer");
-var $gameOver = document.querySelector(".gameOver")
+var $gameOver = document.querySelector(".gameOver");
+var $results = document.querySelector("#results");
 var questions = [
   {
     question: "Commonly used data types DO NOT include:",
@@ -136,6 +137,7 @@ function endGame() {
   $quiz.style.display = "none";
   $beginBtn.style.display = "none";
   $gameOver.style.display = "block";
+  $results.innerHTML = amountCorrect + " out of " + amountAsked;
   clearInterval(counter);
 
 
