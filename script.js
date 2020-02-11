@@ -4,9 +4,12 @@ var $quiz = document.querySelector("#quiz");
 var $question = document.querySelector("#question");
 var $answer = document.querySelector("#answers");
 var questionIndex = 0;
-var $amountCorrect = document.querySelector("#amountCorrect").innerHTML;
-var $amountAsked = document.querySelector("#amountAsked").innerHTML;
+var $amountCorrect = document.querySelector("#amountCorrect");
+var amountCorrect = 0;
+var $amountAsked = document.querySelector("#amountAsked");
+var amountAsked = 0;
 var $timer = document.querySelector("#timer");
+var $gameOver = document.querySelector(".gameOver")
 var questions = [
   {
     question: "Commonly used data types DO NOT include:",
@@ -63,14 +66,9 @@ $beginBtn.addEventListener("click", function (e) {
   $greeting.style.display = "none";
   renderQuestion();
   $quiz.style.display = "block";
-  $amountAsked = 0;
-  $amountCorrect = 0;
   $timer.style.display = "block";
   counter = setInterval(timer, 1000);
 });
-
-$amountCorrect.innerHTML = "Amount Correct: " + $amountCorrect;
-$amountAsked.innerHTML = "Amount Asked: " + $amountAsked;
 
 // this runs the users click against the array of correct answers corresponding
 // with the questions in the array above.
@@ -79,11 +77,14 @@ $answer.addEventListener("click", function (e) {
   var index = e.target.dataset.index;
   var correct = questions[questionIndex].answers[index].isCorrect;
   if (correct) {
-    $amountCorrect++;
-    $amountAsked++;
+    amountAsked++;
+    amountCorrect++;
   } else {
-    $amountAsked++;
+    amountAsked++;
   }
+
+  $amountCorrect.innerHTML = "Amount Correct: " + amountCorrect;
+  $amountAsked.innerHTML = "Amount Asked: " + amountAsked;
   questionIndex++;
   renderQuestion();
 });
@@ -102,8 +103,6 @@ $answer.addEventListener("mouseout", function (e) {
 var count = 60;
 var counter;
 var running = false;
-do {
-} while (running != false)
 function timer() {
   $timer.textContent = count;
   count = count - 1;
@@ -135,5 +134,9 @@ function renderQuestion() {
 
 function endGame() {
   $quiz.style.display = "none";
+  $beginBtn.style.display = "none";
+  $gameOver.style.display = "block";
   clearInterval(counter);
+
+
 }

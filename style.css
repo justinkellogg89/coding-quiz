@@ -9,6 +9,9 @@
 .greeting {
   margin: 10px auto;
 }
+.gameOver {
+  margin: 10px auto;
+}
 
 .col-6 {
   margin: 0 auto;
